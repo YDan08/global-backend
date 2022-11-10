@@ -33,10 +33,10 @@ public class LocalEscolhido {
     @Column(name = "vl_avaliacao_perigo")
     private Integer avaliacaoPerigo;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Endereco endereco;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Mulher mulher;
 
     public LocalEscolhido() {
