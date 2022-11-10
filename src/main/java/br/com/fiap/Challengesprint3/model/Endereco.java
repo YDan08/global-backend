@@ -19,14 +19,8 @@ public class Endereco {
     @Column(name = "cod_endereco")
     private Long id;
 
-    @Column(name = "nr_cep")
-    private Long numeroCep;
-
     @Column(name = "nm_rua")
     private String nomeRua;
-
-    @Column(name = "nr_rua")
-    private Integer numeroRua;
 
     @Column(name = "ds_complemento")
     private String desComplemento;
@@ -37,11 +31,9 @@ public class Endereco {
     public Endereco() {
     }
 
-    public Endereco(Long id, Long numeroCep, String nomeRua, Integer numeroRua, String desComplemento, Bairro bairro) {
+    public Endereco(Long id, String nomeRua, String desComplemento, Bairro bairro) {
         this.id = id;
-        this.numeroCep = numeroCep;
         this.nomeRua = nomeRua;
-        this.numeroRua = numeroRua;
         this.desComplemento = desComplemento;
         this.bairro = bairro;
     }
@@ -54,28 +46,12 @@ public class Endereco {
         this.id = id;
     }
 
-    public Long getNumeroCep() {
-        return numeroCep;
-    }
-
-    public void setNumeroCep(Long numeroCep) {
-        this.numeroCep = numeroCep;
-    }
-
     public String getNomeRua() {
         return nomeRua;
     }
 
     public void setNomeRua(String nomeRua) {
         this.nomeRua = nomeRua;
-    }
-
-    public Integer getNumeroRua() {
-        return numeroRua;
-    }
-
-    public void setNumeroRua(Integer numeroRua) {
-        this.numeroRua = numeroRua;
     }
 
     public String getDesComplemento() {
@@ -96,7 +72,7 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereco [id=" + id + ", numeroCep=" + numeroCep + ", nomeRua=" + nomeRua + ", numeroRua=" + numeroRua
-                + ", desComplemento=" + desComplemento + ", bairro=" + bairro + "]";
+        return "Endereco [id=" + id + ", nomeRua=" + nomeRua + ", desComplemento=" + desComplemento + ", bairro="
+                + bairro + "]";
     }
 }
